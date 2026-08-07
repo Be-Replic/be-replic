@@ -9,7 +9,12 @@ body{
     background:#111;
     color:white;
 
-    font-family:Arial, Helvetica, sans-serif;
+
+    font-family:'Bahnschrift', Arial, sans-serif;
+
+    font-weight:800;
+
+    font-stretch:condensed;
 
 }
 
@@ -25,7 +30,7 @@ header{
 
     padding:25px 10%;
 
-    background:rgba(10,10,10,.75);
+    background:#5bb77a;
 
     backdrop-filter:blur(10px);
 
@@ -90,7 +95,7 @@ nav a{
 
 .hero h1{
 
-    font-size:60px;
+    font-size:80px;
 
     margin-bottom:20px;
 
@@ -98,7 +103,7 @@ nav a{
 
 .hero p{
 
-    font-size:22px;
+    font-size:30px;
 
     margin-bottom:40px;
 
@@ -112,21 +117,24 @@ nav a{
 
     padding:16px 36px;
 
-    background:#0078ff;
+    background:#5bb77a;
 
-    color:white;
+    color:#000000;
 
     text-decoration:none;
 
     border-radius:8px;
 
-    transition:.3s;
+    transition:.5s;
+    
+    font-size:30px;
 
 }
 
 .button:hover{
 
-    background:#005fd1;
+    background:#85eec2;
+    color:#373736;
 
 }
 
@@ -173,42 +181,85 @@ footer{
     padding:40px;
 
     color:#777;
+}
 
-    .gallery{
 
-    display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+.gallery{
 
-    gap:20px;
+    display:flex;
 
-    margin-top:50px;
+    gap:30px;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    align-items:flex-start;
 
 }
 
-.gallery img{
 
-    width:100%;
+.gallery::-webkit-scrollbar{
 
-    height:250px;
+    height:8px;
 
-    object-fit:cover;
+}
+
+
+.project{
+
+    flex:0 0 auto;
+
+    width:max-content;
+
+    background:#1d1d1d;
+
+    padding:20px;
 
     border-radius:12px;
 
-    transition:0.35s;
+}
 
-    cursor:pointer;
+
+.project img{
+
+    height:300px;
+
+    width:auto;
+
+    display:block;
+
+    border-radius:10px;
 
 }
 
-.gallery img:hover{
 
-    transform:scale(1.03);
+.project h3,
+.project p{
+
+    width:300px;
+
+    overflow-wrap:break-word;
 
 }
 
+
+.project h3{
+
+    margin-top:15px;
+
 }
+
+
+.project p{
+
+    color:#ccc;
+
+    margin-top:10px;
+
+}
+
 
 
 
