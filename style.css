@@ -59,7 +59,7 @@ header{
 
 .logo img{
 
-    height:120px;
+    height:90px;
 
     width:auto;
 
@@ -235,13 +235,19 @@ footer{
 
     flex:0 0 auto;
 
-    width:max-content;
+    width:340px;
 
     background:#1d1d1d;
 
     padding:20px;
 
     border-radius:12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:520px;
 
 }
 
@@ -252,35 +258,78 @@ footer{
 
     width:auto;
 
+    max-width:100%;
+
+    object-fit:contain;
+
     display:block;
+
+    margin:auto;
 
     border-radius:10px;
 
 }
 
 
-.project h3,
-.project p{
+.project h3{
 
     width:300px;
+
+    margin-top:15px;
 
     overflow-wrap:break-word;
 
 }
 
 
-.project h3{
-
-    margin-top:15px;
-
-}
-
-
 .project p{
+
+    width:300px;
 
     color:#ccc;
 
     margin-top:10px;
+
+    overflow-wrap:break-word;
+
+    flex-grow:1;
+
+}
+
+
+.gallery-wrapper{
+
+    position:relative;
+
+}
+
+
+.arrow{
+
+    background:#5bb77a;
+
+    color:#373736;
+
+    border:none;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    margin:20px 10px;
+
+}
+
+
+.arrow:hover{
+
+    transform:scale(1.1);
 
 }
 
@@ -313,7 +362,7 @@ footer{
 
     .logo img{
 
-        height:50px;
+        height:40px;
 
     }
 

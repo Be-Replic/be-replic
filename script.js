@@ -40,3 +40,19 @@ fetch("data/realisations.json")
     console.log(realisations);
 
 });
+
+
+
+function scrollGallery(direction){
+
+    const gallery = document.getElementById("gallery-container");
+
+    gallery.scrollBy({
+
+        left: direction * 350,
+
+        behavior:"smooth"
+
+    });
+
+}

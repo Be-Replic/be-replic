@@ -1,12 +1,12 @@
 [
     {
-        "image": "test.png",
-        "titre": "Cache essuie-glace Renault Clio",
-        "description": "Reproduction d'une pièce automobile par moulage silicone et coulée sous vide."
+        "image": "couteau.png",
+        "titre": "Reproduction d'un modèle de couteau – Prototype plastique ",
+        "description": "Réalisation d'une réplique fonctionnelle en plastique à partir d'une pièce existante. Création du moule silicone puis coulée sous vide pour obtenir un prototype léger destiné à la démonstration du procédé de reproduction."
     },
     {
-        "image": "test2.png",
-        "titre": "Moule silicone sur mesure",
-        "description": "Création d'un moule adapté à une production en petite série."
+        "image": "cabochons.png",
+	"titre": "Réalisation de pièces techniques en résine",
+        "description": "Réalisation de cabochons en résine avec une double finition : surface extérieure lisse et zones internes texturées. Un travail de masquage a été réalisé afin de conserver certaines zones transparentes tout en appliquant une texture grainée sur les surfaces souhaitées."
     }
 ]
