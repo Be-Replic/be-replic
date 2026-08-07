@@ -295,18 +295,19 @@ footer{
 
 .project h3{
 
-    width:300px;
+    width:100%;
 
     margin-top:15px;
 
     overflow-wrap:break-word;
+    
 
 }
 
 
 .project p{
 
-    width:300px;
+    width:100%;
 
     color:#ccc;
 
@@ -512,6 +513,25 @@ footer{
 
 
     /* GALERIE */
+@media (max-width:600px){
+
+    .gallery{
+
+        height:520px;
+
+    }
+
+
+    .project{
+
+        width:260px;
+
+        min-height:450px;
+
+        padding:15px;
+
+    }
+
 
     .project img{
 
@@ -520,11 +540,46 @@ footer{
     }
 
 
-    .project p,
     .project h3{
 
-        width:250px;
+        font-size:20px;
 
     }
+
+
+    .project p{
+
+        width:220px;
+
+        font-size:14px;
+
+    }
+
+
+    .arrow{
+
+        width:35px;
+
+        height:35px;
+
+        font-size:22px;
+
+    }
+
+
+    .arrow.left{
+
+        left:5px;
+
+    }
+
+
+    .arrow.right{
+
+        right:5px;
+
+    }
+
+}
 
 }

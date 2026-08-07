@@ -99,6 +99,17 @@ function goToSlide(index){
 
 function updateCarousel(){
 
+    let offset = 330;
+
+
+    if(window.innerWidth <= 768){
+
+        offset = 250;
+
+    }
+
+
+
 
     projects.forEach((project,index)=>{
 
@@ -127,7 +138,7 @@ function updateCarousel(){
 
 
         project.style.transform = 
-        `translateX(${position * 330}px) scale(${position === 0 ? 1 : 0.8})`;
+        `translateX(${position * offset}px) scale(${position === 0 ? 1 : 0.8})`;
 
 
 
@@ -141,6 +152,7 @@ function updateCarousel(){
 
 
     });
+
 
 
 
