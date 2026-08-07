@@ -423,9 +423,6 @@ footer{
 
 
 
-@media (max-width:768px){
-
-    /* HEADER */
 
 @media (max-width:768px){
 
@@ -453,12 +450,13 @@ footer{
 
     }
 
-}
+
 
 
     nav a{
 
-         font: size 10px;;
+         font-size: 23px;;
+        margin-left:20px;
 
     }
 
@@ -513,7 +511,6 @@ footer{
 
 
     /* GALERIE */
-@media (max-width:600px){
 
     .gallery{
 
@@ -581,10 +578,21 @@ footer{
 
     .arrow.right{
 
-        right:5x;
+        right:5px;
 
     }
-
 }
 
+
+
+@media (max-width:420px){
+
+
+    nav a{
+
+         font-size: 18px;;
+        margin-left:10px;
+
+    }
 }
+

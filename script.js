@@ -93,7 +93,7 @@ function goToSlide(index){
 }
 
 
-
+window.innerWidth
 
 // Mise à jour du carrousel
 
