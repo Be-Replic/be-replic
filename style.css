@@ -458,7 +458,7 @@ footer{
 
     nav a{
 
-         font-size:clamp(10px, 4vw, 15px);
+         font: size 10px;;
 
     }
 
