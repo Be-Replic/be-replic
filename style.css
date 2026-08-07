@@ -28,7 +28,7 @@ header{
     justify-content:space-between;
     align-items:center;
 
-    padding:25px 10%;
+    padding:0px 20px;
 
     background:#5bb77a;
 
@@ -36,12 +36,31 @@ header{
 
     z-index:999;
 
+
 }
 
-.logo{
+.logo img{
 
-    font-size:28px;
-    font-weight:bold;
+
+  
+    display:flex;
+
+    align-items:center;
+
+    background:white;
+
+    padding:10px 15px;
+
+    
+    border-radius:0 0 30px 0;
+
+    height:120px;
+
+    width:auto;
+
+    display:block;
+
+  transform:translateX(-20px);
 
 }
 
@@ -49,10 +68,12 @@ nav a{
 
     color:white;
 
+    font-size:clamp(20px, 4vw, 60px);
+
     margin-left:30px;
 
     text-decoration:none;
-
+    font-size:40px;
 }
 
 .hero{
@@ -81,7 +102,7 @@ nav a{
     width:100%;
     height:100%;
 
-    background:rgba(0,0,0,.60);
+    background:#1b1b1b;
 
 }
 
@@ -263,3 +284,105 @@ footer{
 
 
 
+@media (max-width:768px){
+
+    /* HEADER */
+
+    header{
+
+        padding:0px 20px;
+
+    }
+
+
+    .logo img{
+
+          display:flex;
+
+    align-items:center;
+
+    background:white;
+
+    padding:10px 15px;
+
+    
+    border-radius:0 0 20px 0;
+
+    height:80px;
+
+    width:auto;
+
+    display:block;
+
+
+
+    }
+
+
+    nav a{
+
+        font-size:16px;
+
+    }
+
+
+    /* TITRES */
+
+    .hero h1{
+
+        font-size:40px;
+
+    }
+
+
+    .hero h2{
+
+        font-size:30px;
+
+    }
+
+
+    .hero h3{
+
+        font-size:22px;
+
+    }
+
+
+    /* TEXTE */
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+
+    /* BOUTON */
+
+    .button{
+
+        font-size:18px;
+
+        padding:14px 25px;
+
+    }
+
+
+    /* GALERIE */
+
+    .project img{
+
+        height:200px;
+
+    }
+
+
+    .project p,
+    .project h3{
+
+        width:250px;
+
+    }
+
+}
