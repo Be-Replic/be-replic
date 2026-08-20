@@ -19,26 +19,24 @@ fetch("data/realisations.json")
 
     // Création des images
 
-    realisations.forEach(realisation => {
+realisations.forEach((realisation, index) => {
 
+    gallery.innerHTML += `
 
-        gallery.innerHTML += `
+    <div class="project" onclick="goToSlide(${index})">
 
-        <div class="project">
+        <img src="images/realisations/${realisation.image}" 
+             alt="${realisation.titre}">
 
-            <img src="images/realisations/${realisation.image}" 
-                 alt="${realisation.titre}">
+        <h3>${realisation.titre}</h3>
 
-            <h3>${realisation.titre}</h3>
+        <p>${realisation.description}</p>
 
-            <p>${realisation.description}</p>
+    </div>
 
-        </div>
+    `;
 
-        `;
-
-
-    });
+});
 
 
 
@@ -206,5 +204,24 @@ function scrollGallery(direction){
 
     updateCarousel();
 
+
+}
+
+function toggleMaterials(){
+
+    const list = document.getElementById("materials-list");
+    const arrow = document.getElementById("materials-arrow");
+
+    list.classList.toggle("open");
+
+    if(list.classList.contains("open")){
+
+        arrow.textContent = "⌃";
+
+    }else{
+
+        arrow.textContent = "⌄";
+
+    }
 
 }
