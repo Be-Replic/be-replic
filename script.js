@@ -1,6 +1,67 @@
 console.log("be-replic");
 
 
+// Menu mobile (hamburger)
+
+const navToggle = document.getElementById("navToggle");
+const mainNav = document.getElementById("mainNav");
+
+if(navToggle && mainNav){
+
+    navToggle.addEventListener("click", () => {
+
+        const isOpen = mainNav.classList.toggle("open");
+        navToggle.classList.toggle("open", isOpen);
+        navToggle.setAttribute("aria-expanded", isOpen);
+        navToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mainNav.classList.remove("open");
+            navToggle.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+}
+
+
+// Apparition douce des sections au scroll
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if("IntersectionObserver" in window && revealElements.length){
+
+    const revealObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+}else{
+
+    revealElements.forEach(el => el.classList.add("visible"));
+
+}
+
+
 const gallery = document.getElementById("gallery-container");
 const dotsContainer = document.getElementById("gallery-dots");
 
@@ -26,7 +87,8 @@ realisations.forEach((realisation, index) => {
     <div class="project" onclick="goToSlide(${index})">
 
         <img src="images/realisations/${realisation.image}" 
-             alt="${realisation.titre}">
+             alt="${realisation.titre}"
+             loading="lazy">
 
         <h3>${realisation.titre}</h3>
 
@@ -211,10 +273,13 @@ function toggleMaterials(){
 
     const list = document.getElementById("materials-list");
     const arrow = document.getElementById("materials-arrow");
+    const button = document.querySelector(".materials-button");
 
-    list.classList.toggle("open");
+    const isOpen = list.classList.toggle("open");
 
-    if(list.classList.contains("open")){
+    button.setAttribute("aria-expanded", isOpen);
+
+    if(isOpen){
 
         arrow.textContent = "⌃";
 
